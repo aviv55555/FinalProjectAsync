@@ -5,7 +5,6 @@
     first_name, last_name, birthday, and marital_status. The schema is compiled into a Mongoose model
     and exported for use in controllers and routes.
  */
-
 const mongoose = require('mongoose');
 
 const userSchema = new mongoose.Schema({
@@ -33,5 +32,4 @@ const userSchema = new mongoose.Schema({
         default: 'single'
     }
 });
-
 module.exports = mongoose.model('User', userSchema);

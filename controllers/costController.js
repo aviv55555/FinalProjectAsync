@@ -32,10 +32,10 @@ class CostController {
             }
 
             // List of valid categories
-            const allowedCategories = ['food', 'health', 'housing', 'sport', 'education'];
-            if (!allowedCategories.includes(category)) {
+            const ALLOWED_CATEGORIES = ['food', 'health', 'housing', 'sport', 'education'];
+            if (!ALLOWED_CATEGORIES.includes(category)) {
                 console.log('Category not recognized:', category);
-                return res.status(400).json({ error: 'Invalid category', validCategories: allowedCategories });
+                return res.status(400).json({ error: 'Invalid category', validCategories: ALLOWED_CATEGORIES });
             }
 
             // Confirm the user exists in the system

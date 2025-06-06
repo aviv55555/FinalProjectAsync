@@ -8,7 +8,6 @@
  * @requires ./routes/userRoute.js
  * @requires ./routes/aboutRoute.js
  */
-
 import express from 'express';
 import mongoose from 'mongoose';
 import costRoutes from './routes/costRoute.js';

@@ -13,7 +13,7 @@ import datetime
 import random
 
 filename = input("filename=")
-line = ""
+line = "https://costmanageravivbar.onrender.com/"
 output = open(filename, "w")
 sys.stdout = output
 
@@ -40,7 +40,7 @@ print()
 print("Testing GET /api/report - Initial")
 print("---------------------------------")
 try:
-    url = line + "api/report/?id=123123&year=2025&month=2"
+    url = line + "api/report/?id=123123&year=2025&month=6"
     data = requests.get(url)
     print("url=" + url)
     print("data.status_code=" + str(data.status_code))
@@ -69,7 +69,7 @@ print()
 print("Testing GET /api/report - After Add")
 print("-----------------------------------")
 try:
-    url = line + "api/report/?id=123123&year=2025&month=1"
+    url = line + "api/report/?id=123123&year=2025&month=6"
     data = requests.get(url)
     print("url=" + url)
     print("data.status_code=" + str(data.status_code))
@@ -80,7 +80,7 @@ except Exception as e:
     print(e)
 
 # Part 2: Structured tests using pytest
-BASE_URL = ""
+BASE_URL = "https://costmanageravivbar.onrender.com/api"
 def get_test_user_id():
     return 123123
 
@@ -185,3 +185,4 @@ def test_get_about_info():
     assert len(data) >= 1
     for member in data:
         assert "first_name" in member and "last_name" in member
+
